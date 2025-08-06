@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login db</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="video">
+        <video autoplay muted loop>
+            <source src="assets/background.mp4" type="video/mp4">
+        </video>
+    </div>
+    
+    <div class="judulkiri">Awimbud</div>
+    
+    <div class="container">
+        <div class="title">Login</div>
+        <form action="php/login.php" method="POST">
+            <div class="inputbox">
+                <input type="text" name="username" required>
+                <label>Username</label>
+                <span class="underline"></span>
+            </div>
+            <div class="inputbox">
+                <input type="password" name="password" required>
+                <label>Password</label>
+                <span class="underline"></span>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="footer">
+            <a href="#" id="registerbtn">Create account</a>
+            </div>
+        </form>
+    </div>
+
+    <div class="register">
+        <div class="title">Register</div>
+        <form action="php/register.php" method="POST">
+            <div class="inputbox">
+                <input type="text" name="username" required>
+                <label>Username</label>
+                <span class="underline"></span>
+            </div>
+            <div class="inputbox">
+                <input type="email" name="email" required>
+                <label>Email</label>
+                <span class="underline"></span>
+            </div>
+            <div class="inputbox">
+                <input type="password" name="password" required>
+                <label>Password</label>
+                <span class="underline"></span>
+            </div>
+            <button type="submit" class="btn">Register</button>
+            <div class="footer">
+                <a href="#" id="loginbtn">Login</a>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
