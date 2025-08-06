@@ -1,13 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // DOM Elements
     const loginForm = document.querySelector('.container form');
     const registerForm = document.querySelector('.register form');
     const registerBtn = document.getElementById('registerbtn');
     const loginBtn = document.getElementById('loginbtn');
     const container = document.querySelector('.container');
     const registerContainer = document.querySelector('.register');
-    
-    // Form toggle functionality
     registerBtn.addEventListener('click', function(e) {
         e.preventDefault();
         container.style.animation = 'fadeOut 0.5s forwards';
@@ -28,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 500);
     });
     
-    // Check URL for messages
     const urlParams = new URLSearchParams(window.location.search);
     const error = urlParams.get('error');
     const success = urlParams.get('success');
@@ -40,8 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (success) {
         showMessage(success, 'success');
     }
-    
-    // Form submission animations
     if (loginForm) {
         loginForm.addEventListener('submit', function(e) {
             const btn = this.querySelector('.btn');
@@ -58,7 +52,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Floating animation for containers
     const containers = document.querySelectorAll('.container, .register');
     containers.forEach(box => {
         box.addEventListener('mouseenter', () => {
@@ -71,8 +64,6 @@ document.addEventListener('DOMContentLoaded', function() {
             box.style.boxShadow = '0 15px 35px rgba(0, 0, 0, 0.5)';
         });
     });
-    
-    // Input focus effects
     const inputs = document.querySelectorAll('.inputbox input');
     inputs.forEach(input => {
         input.addEventListener('focus', function() {
@@ -86,7 +77,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Show message function
     function showMessage(text, type) {
         const messageDiv = document.createElement('div');
         messageDiv.className = `message ${type}-message`;
@@ -103,7 +93,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 5000);
     }
     
-    // Add CSS animations dynamically
     const style = document.createElement('style');
     style.textContent = `
         @keyframes fadeIn {
