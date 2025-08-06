@@ -3,15 +3,12 @@ session_start();
 require 'config.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Escape input untuk SQLite
     $username = $conn->escapeString($_POST['username']);
     $password = $_POST['password'];
 
-    // Gunakan query() untuk SELECT
     $sql = "SELECT id, username, password FROM users WHERE username = '$username'";
     $result = $conn->query($sql);
 
-    // Ambil data user
     $row = $result->fetchArray(SQLITE3_ASSOC);
 
     if ($row) {
